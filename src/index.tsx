@@ -1,5 +1,10 @@
 import { render } from 'react-dom'
+import { SideBarContextProvaider } from './context/SideBarContext'
 
 import { App } from './App'
 
-render(<App />, document.getElementById('root'))
+render(
+    <SideBarContextProvaider>
+        <App />
+    </SideBarContextProvaider>
+    , document.getElementById('root'))
